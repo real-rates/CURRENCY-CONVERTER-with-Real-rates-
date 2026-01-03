@@ -7,6 +7,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FRNVN94CN6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FRNVN94CN6');
+</script>
+
 <style>
 body{
 margin:0;
@@ -96,7 +105,6 @@ margin:0 5px;
 <div class="app">
 <h2>Live Currency Converter</h2>
 
-<!-- FROM SEARCH -->
 <div class="search">
 <input type="text" id="searchFrom" placeholder="Search from currency...">
 </div>
@@ -113,7 +121,6 @@ margin:0 5px;
 <button onclick="swap()">⇅</button>
 </div>
 
-<!-- TO SEARCH -->
 <div class="search">
 <input type="text" id="searchTo" placeholder="Search to currency...">
 </div>
@@ -128,7 +135,6 @@ margin:0 5px;
 
 <div class="rate" id="rate"></div>
 
-<!-- Minimal content for AdSense -->
 <section>
 <h3>Live Currency Exchange Rates</h3>
 <p>Convert all world currencies using real-time exchange rates. The converter automatically updates rates and allows instant calculation.</p>
