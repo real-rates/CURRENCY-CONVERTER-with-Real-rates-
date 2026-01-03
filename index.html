@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Live Currency Converter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:Poppins,sans-serif;
+background:linear-gradient(135deg,#6a11cb,#2575fc);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+.app{
+width:360px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(20px);
+border-radius:28px;
+padding:20px;
+box-shadow:0 25px 50px rgba(0,0,0,.3);
+}
+h2{text-align:center;margin-bottom:10px;}
+.search input{
+width:100%;
+padding:10px;
+border:none;
+border-radius:12px;
+background:rgba(255,255,255,.2);
+color:white;
+outline:none;
+margin-bottom:8px;
+}
+.box{margin-top:12px;}
+.row{
+display:flex;
+align-items:center;
+gap:10px;
+}
+.row img{
+width:32px;
+height:24px;
+border-radius:4px;
+}
+select,input{
+flex:1;
+padding:12px;
+border:none;
+border-radius:14px;
+background:rgba(255,255,255,.2);
+color:white;
+font-size:16px;
+outline:none;
+}
+.swap{text-align:center;margin:15px 0;}
+button{
+width:60px;height:60px;
+border-radius:50%;
+border:none;
+font-size:22px;
+cursor:pointer;
+background:linear-gradient(135deg,#a18cd1,#fbc2eb);
+color:white;
+}
+.rate{text-align:center;margin-top:10px;}
+.dev{text-align:center;font-size:12px;margin-top:15px;opacity:.8;}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+<h2>Live Currency Converter</h2>
+
+<!-- FROM SEARCH -->
+<div class="search">
+<input type="text" id="searchFrom" placeholder="Search from currency...">
+</div>
+
+<div class="box">
+<div class="row">
+<img id="flagFrom">
+<select id="from"></select>
+</div>
+<input type="number" id="amount" value="1">
+</div>
+
+<div class="swap">
+<button onclick="swap()">⇅</button>
+</div>
+
+<!-- TO SEARCH -->
+<div class="search">
+<input type="text" id="searchTo" placeholder="Search to currency...">
+</div>
+
+<div class="box">
+<div class="row">
+<img id="flagTo">
+<select id="to"></select>
+</div>
+<input type="text" id="result" readonly>
+</div>
+
+<div class="rate" id="rate"></div>
+
+<div class="dev">
+Developer: Badsha Bilal<br>
+badsha.bilal.546@gmail.com
+</div>
+</div>
+
+<script>
+const api="https://open.er-api.com/v6/latest/USD";
+
+const from=document.getElementById("from");
+const to=document.getElementById("to");
+const amount=document.getElementById("amount");
+const result=document.getElementById("result");
+const rateText=document.getElementById("rate");
+const flagFrom=document.getElementById("flagFrom");
+const flagTo=document.getElementById("flagTo");
+
+const searchFrom=document.getElementById("searchFrom");
+const searchTo=document.getElementById("searchTo");
+
+let rates={}, currencies=[];
+
+const flagMap={
+USD:"us",EUR:"eu",GBP:"gb",AFN:"af",PKR:"pk",INR:"in",
+JPY:"jp",CNY:"cn",AUD:"au",CAD:"ca",SAR:"sa"
+};
+
+async function load(){
+ const res=await fetch(api);
+ const data=await res.json();
+ rates=data.rates;
+ currencies=Object.keys(rates);
+
+ renderOptions(from,currencies);
+ renderOptions(to,currencies);
+
+ from.value="EUR";
+ to.value="USD";
+ convert();
+}
+
+function renderOptions(select,list){
+ select.innerHTML="";
+ list.forEach(c=>{
+  select.innerHTML+=`<option>${c}</option>`;
+ });
+}
+
+function getFlag(cur){
+ let code=flagMap[cur] || cur.slice(0,2).toLowerCase();
+ return `https://flagcdn.com/w40/${code}.png`;
+}
+
+function updateFlags(){
+ flagFrom.src=getFlag(from.value);
+ flagTo.src=getFlag(to.value);
+}
+
+function convert(){
+ let r=rates[to.value]/rates[from.value];
+ result.value=(amount.value*r).toFixed(2);
+ rateText.innerText=`1 ${from.value} = ${r.toFixed(4)} ${to.value}`;
+ updateFlags();
+}
+
+function swap(){
+ [from.value,to.value]=[to.value,from.value];
+ convert();
+}
+
+searchFrom.oninput=()=>{
+ let v=searchFrom.value.toUpperCase();
+ renderOptions(from,currencies.filter(c=>c.includes(v)));
+};
+
+searchTo.oninput=()=>{
+ let v=searchTo.value.toUpperCase();
+ renderOptions(to,currencies.filter(c=>c.includes(v)));
+};
+
+from.onchange=convert;
+to.onchange=convert;
+amount.oninput=convert;
+
+load();
+</script>
+
+</body>
+</html>
