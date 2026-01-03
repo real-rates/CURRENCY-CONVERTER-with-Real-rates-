@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Live Currency Converter</title>
+<title>Live Currency Converter | Real Rates</title>
+<meta name="description" content="Real Rates Currency Converter - Convert all world currencies with live exchange rates, flags, and auto conversion.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
@@ -69,6 +70,24 @@ color:white;
 }
 .rate{text-align:center;margin-top:10px;}
 .dev{text-align:center;font-size:12px;margin-top:15px;opacity:.8;}
+section{
+margin-top:15px;
+background:rgba(255,255,255,.1);
+padding:12px;
+border-radius:12px;
+font-size:14px;
+}
+footer{
+margin-top:15px;
+text-align:center;
+font-size:12px;
+opacity:.8;
+}
+footer a{
+color:white;
+text-decoration:none;
+margin:0 5px;
+}
 </style>
 </head>
 
@@ -109,6 +128,21 @@ color:white;
 
 <div class="rate" id="rate"></div>
 
+<!-- Minimal content for AdSense -->
+<section>
+<h3>Live Currency Exchange Rates</h3>
+<p>Convert all world currencies using real-time exchange rates. The converter automatically updates rates and allows instant calculation.</p>
+
+<h3>How Currency Conversion Works</h3>
+<p>Our tool uses reliable exchange rate sources to ensure accurate conversion. Ideal for travelers, traders, and students worldwide.</p>
+</section>
+
+<footer>
+<a href="about.html">About</a> | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="contact.html">Contact</a>
+</footer>
+
 <div class="dev">
 Developer: Badsha Bilal<br>
 badsha.bilal.546@gmail.com
@@ -117,7 +151,6 @@ badsha.bilal.546@gmail.com
 
 <script>
 const api="https://open.er-api.com/v6/latest/USD";
-
 const from=document.getElementById("from");
 const to=document.getElementById("to");
 const amount=document.getElementById("amount");
@@ -125,11 +158,10 @@ const result=document.getElementById("result");
 const rateText=document.getElementById("rate");
 const flagFrom=document.getElementById("flagFrom");
 const flagTo=document.getElementById("flagTo");
-
 const searchFrom=document.getElementById("searchFrom");
 const searchTo=document.getElementById("searchTo");
 
-let rates={}, currencies=[];
+let rates={}, currencies={};
 
 const flagMap={
 USD:"us",EUR:"eu",GBP:"gb",AFN:"af",PKR:"pk",INR:"in",
@@ -183,7 +215,6 @@ searchFrom.oninput=()=>{
  let v=searchFrom.value.toUpperCase();
  renderOptions(from,currencies.filter(c=>c.includes(v)));
 };
-
 searchTo.oninput=()=>{
  let v=searchTo.value.toUpperCase();
  renderOptions(to,currencies.filter(c=>c.includes(v)));
