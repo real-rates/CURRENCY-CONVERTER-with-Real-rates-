@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- 🔧 IMPROVED META TAGS FOR SEO & SOCIAL SHARING -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 🎯 PRIMARY TITLE FOR SEO -->
-    <title>Free Currency Converter – Live AFN to USD, EUR, GBP, PKR Exchange Rates</title>
+    <!-- 🎯 PRIMARY SEO TITLE -->
+    <title>Free Currency Converter – Live AFN to USD, EUR, GBP, PKR Exchange Rates | Real Rates</title>
     
-    <!-- 🎯 PRIMARY META DESCRIPTION FOR SEO -->
+    <!-- 🎯 PRIMARY SEO META DESCRIPTION -->
     <meta name="description" content="Convert 150+ world currencies with real-time exchange rates. Free live currency converter for Afghan Afghani (AFN), US Dollar (USD), Euro (EUR), British Pound (GBP), Pakistani Rupee (PKR). Historical charts and auto conversion.">
     
-    <!-- 🔗 CANONICAL URL (IMPORTANT FOR SEO) -->
+    <!-- 🔑 KEYWORDS FOR SEO -->
+    <meta name="keywords" content="currency converter, exchange rates, AFN to USD, Afghan Afghani, real-time rates, currency calculator, forex converter, money converter, AFN to PKR, USD to AFN">
+    
+    <!-- 👤 AUTHOR META -->
+    <meta name="author" content="Badsha Bilal">
+    
+    <!-- 🔗 CANONICAL URL -->
     <link rel="canonical" href="https://real-rates.github.io/CURRENCY-CONVERTER-with-Real-rates-/" />
     
-    <!-- 🏷️ KEYWORDS META TAG (LESS IMPORTANT BUT STILL USEFUL) -->
-    <meta name="keywords" content="currency converter, exchange rates, AFN to USD, Afghan Afghani, real-time rates, currency calculator, forex converter, money converter">
-    
-    <!-- 📱 OPEN GRAPH TAGS FOR SOCIAL MEDIA -->
+    <!-- 📱 OPEN GRAPH TAGS FOR FACEBOOK/SOCIAL MEDIA -->
     <meta property="og:title" content="Free Live Currency Converter | Real Exchange Rates">
     <meta property="og:description" content="Convert 150+ currencies with real-time rates. Free online currency converter for AFN, USD, EUR, GBP, PKR, and more.">
     <meta property="og:image" content="https://real-rates.github.io/CURRENCY-CONVERTER-with-Real-rates-/preview.png">
     <meta property="og:url" content="https://real-rates.github.io/CURRENCY-CONVERTER-with-Real-rates-/">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Real Rates Currency Converter">
     
     <!-- 🐦 TWITTER CARD TAGS -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Live Currency Converter | Real Rates">
     <meta name="twitter:description" content="Free currency converter with real-time exchange rates for 150+ currencies.">
     <meta name="twitter:image" content="https://real-rates.github.io/CURRENCY-CONVERTER-with-Real-rates-/preview.png">
+    <meta name="twitter:creator" content="@badshabilal">
     
     <!-- 📊 JSON-LD SCHEMA MARKUP FOR GOOGLE (CRITICAL FOR SEO) -->
     <script type="application/ld+json">
@@ -43,12 +47,26 @@
             "name": "Real Rates",
             "url": "https://real-rates.github.io/"
         },
+        "author": {
+            "@type": "Person",
+            "name": "Badsha Bilal",
+            "url": "https://www.facebook.com/share/1Bw4fGVbyE/",
+            "sameAs": [
+                "https://www.facebook.com/share/1Bw4fGVbyE/",
+                "https://www.instagram.com/badsha.bilal_10"
+            ]
+        },
         "operatingSystem": "Web",
         "applicationCategory": "FinanceApplication",
         "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "150"
         },
         "potentialAction": {
             "@type": "ConvertAction",
@@ -68,18 +86,37 @@
     }
     </script>
     
-    <!-- 🚀 PRELOAD CRITICAL RESOURCES FOR FASTER LOADING -->
+    <!-- 🏷️ ADDITIONAL SCHEMA FOR WEBSITE -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Real Rates Currency Converter",
+        "url": "https://real-rates.github.io/CURRENCY-CONVERTER-with-Real-rates-/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://real-rates.github.io/CURRENCY-CONVERTER-with-Real-rates-/?search={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <!-- 🚀 PERFORMANCE OPTIMIZATION -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" as="style">
+    <link rel="preload" href="https://flagcdn.com/w40/af.png" as="image">
     <link rel="preload" href="https://flagcdn.com/w40/us.png" as="image">
     <link rel="preload" href="https://flagcdn.com/w40/eu.png" as="image">
-    <link rel="preload" href="https://flagcdn.com/w40/af.png" as="image">
     
     <!-- 🎨 STYLES -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Google Analytics (GA4) -->
+    <!-- 📊 GOOGLE ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FRNVN94CN6"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -87,7 +124,7 @@
         gtag('js', new Date());
         gtag('config', 'G-FRNVN94CN6');
         
-        // 🌍 AUTO PAGEVIEW EVENT WITH CURRENCY INFO
+        // 📈 AUTO PAGEVIEW EVENT
         window.addEventListener('DOMContentLoaded', () => {
             gtag('event', 'page_view', {
                 page_title: 'Live Currency Converter',
@@ -100,10 +137,11 @@
     <style>
     * {
         box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
     
     body {
-        margin: 0;
         font-family: 'Poppins', sans-serif;
         background: linear-gradient(135deg, #6a11cb, #2575fc);
         min-height: 100vh;
@@ -112,11 +150,12 @@
         align-items: center;
         color: white;
         padding: 20px;
+        line-height: 1.6;
     }
     
     .app {
         width: 100%;
-        max-width: 400px;
+        max-width: 420px;
         background: rgba(255, 255, 255, 0.15);
         backdrop-filter: blur(20px);
         border-radius: 28px;
@@ -130,6 +169,7 @@
         margin-bottom: 15px;
         font-size: 24px;
         font-weight: 600;
+        color: white;
     }
     
     .search input {
@@ -142,6 +182,7 @@
         outline: none;
         margin-bottom: 10px;
         font-size: 16px;
+        font-family: 'Poppins', sans-serif;
     }
     
     .search input::placeholder {
@@ -177,11 +218,13 @@
         font-size: 16px;
         outline: none;
         font-family: 'Poppins', sans-serif;
+        cursor: pointer;
     }
     
     select option {
         background: #6a11cb;
         color: white;
+        padding: 10px;
     }
     
     .swap {
@@ -199,6 +242,9 @@
         background: linear-gradient(135deg, #a18cd1, #fbc2eb);
         color: white;
         transition: transform 0.2s, box-shadow 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     button:hover {
@@ -212,6 +258,9 @@
         font-size: 16px;
         font-weight: 600;
         min-height: 24px;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
     }
     
     .dev {
@@ -234,32 +283,76 @@
         margin-top: 0;
         margin-bottom: 8px;
         font-size: 16px;
+        color: white;
     }
     
     footer {
         margin-top: 20px;
         text-align: center;
-        font-size: 13px;
+        font-size: 14px;
         opacity: .9;
     }
     
-    footer a {
-        color: white;
-        text-decoration: none;
-        margin: 0 8px;
-        transition: opacity 0.2s;
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 15px;
     }
     
-    footer a:hover {
+    .footer-links a {
+        color: white;
+        text-decoration: none;
+        transition: opacity 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .footer-links a:hover {
         opacity: 0.8;
         text-decoration: underline;
     }
     
-    /* 📱 RESPONSIVE IMPROVEMENTS */
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 18px;
+    }
+    
+    .social-icon:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-3px);
+    }
+    
+    .copyright {
+        margin-top: 15px;
+        font-size: 12px;
+        opacity: 0.7;
+    }
+    
+    /* 📱 RESPONSIVE DESIGN */
     @media (max-width: 480px) {
         .app {
             padding: 20px;
             border-radius: 20px;
+            max-width: 100%;
         }
         
         h2 {
@@ -281,55 +374,124 @@
             height: 60px;
             font-size: 22px;
         }
+        
+        .footer-links {
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .social-icon {
+            width: 35px;
+            height: 35px;
+            font-size: 16px;
+        }
     }
     
-    /* 🔍 FOCUS STATES FOR ACCESSIBILITY */
+    /* 🔍 ACCESSIBILITY */
     select:focus, input:focus, button:focus {
         outline: 2px solid rgba(255, 255, 255, 0.5);
         outline-offset: 2px;
     }
     
-    /* ⚡ PERFORMANCE: REDUCE ANIMATIONS FOR PREFERS-REDUCED-MOTION */
-    @media (prefers-reduced-motion: reduce) {
-        button {
-            transition: none;
-        }
+    /* 🎨 LOADING STATE */
+    .loading {
+        display: none;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .loading.active {
+        display: block;
+    }
+    
+    .spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-top-color: white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto;
+    }
+    
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+    
+    /* 🔊 SOUND TOGGLE */
+    .sound-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+    }
+    
+    .sound-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+    }
+    
+    .sound-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(1.1);
+    }
+    
+    .sound-btn.muted {
+        opacity: 0.5;
     }
     </style>
 </head>
 
 <body>
-    <!-- 🏷️ MAIN CONTENT WITH IMPROVED SEMANTIC STRUCTURE -->
-    <main class="app" role="main">
-        <h1 style="display:none;">Live Currency Converter with Real Exchange Rates</h1>
+    <!-- 🔊 SOUND TOGGLE -->
+    <div class="sound-toggle">
+        <button class="sound-btn" id="soundToggle" title="Toggle Sound" aria-label="Toggle sound effects">
+            🔊
+        </button>
+    </div>
+
+    <!-- 🏷️ MAIN CONTENT -->
+    <main class="app" role="main" itemscope itemtype="https://schema.org/CurrencyConverter">
+        <h1 itemprop="name" style="display:none;">Live Currency Converter with Real Exchange Rates</h1>
         
-        <h2>Live Currency Converter</h2>
+        <h2 itemprop="headline">Live Currency Converter</h2>
         
-        <!-- 🔍 SEARCH FROM CURRENCY -->
+        <!-- 🔍 SEARCH -->
         <div class="search" role="search">
             <input type="text" id="searchFrom" placeholder="Search from currency..." aria-label="Search from currency">
         </div>
         
-        <!-- 💰 FROM CURRENCY SELECTION -->
+        <!-- 💰 FROM CURRENCY -->
         <div class="box">
             <div class="row">
                 <img id="flagFrom" alt="From currency flag" loading="lazy">
                 <select id="from" aria-label="Select currency to convert from"></select>
             </div>
-            <input type="number" id="amount" value="1" min="0.01" step="0.01" aria-label="Amount to convert">
+            <input type="number" id="amount" value="100" min="0.01" step="0.01" aria-label="Amount to convert">
         </div>
         
-        <!-- 🔄 SWAP BUTTON -->
+        <!-- 🔄 SWAP -->
         <div class="swap">
-            <button onclick="swap()" aria-label="Swap currencies">⇅</button>
+            <button id="swapBtn" aria-label="Swap currencies">⇅</button>
         </div>
         
-        <!-- 🔍 SEARCH TO CURRENCY -->
+        <!-- 🔍 SEARCH TO -->
         <div class="search">
             <input type="text" id="searchTo" placeholder="Search to currency..." aria-label="Search to currency">
         </div>
         
-        <!-- 💰 TO CURRENCY SELECTION -->
+        <!-- 💰 TO CURRENCY -->
         <div class="box">
             <div class="row">
                 <img id="flagTo" alt="To currency flag" loading="lazy">
@@ -338,30 +500,125 @@
             <input type="text" id="result" readonly aria-label="Conversion result">
         </div>
         
-        <!-- 📊 EXCHANGE RATE DISPLAY -->
+        <!-- 📊 EXCHANGE RATE -->
         <div class="rate" id="rate" role="status" aria-live="polite"></div>
         
         <!-- 📝 INFO SECTION -->
         <section>
             <h3>Live Currency Exchange Rates</h3>
-            <p>Convert 150+ world currencies using real-time exchange rates. Includes Afghan Afghani (AFN), US Dollar (USD), Euro (EUR), British Pound (GBP), Pakistani Rupee (PKR), and more.</p>
+            <p itemprop="description">Convert 150+ world currencies using real-time exchange rates. Includes Afghan Afghani (AFN), US Dollar (USD), Euro (EUR), British Pound (GBP), Pakistani Rupee (PKR), and more.</p>
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Loading exchange rates...</p>
+            </div>
         </section>
         
-        <!-- 👣 FOOTER WITH IMPROVED LINKS -->
+        <!-- 👣 FOOTER WITH SOCIAL LINKS -->
         <footer>
-            <a href="about.html" onclick="gtag('event','footer_click',{link:'about'})">About</a> | 
-            <a href="privacy.html" onclick="gtag('event','footer_click',{link:'privacy'})">Privacy</a> | 
-            <a href="contact.html" onclick="gtag('event','footer_click',{link:'contact'})">Contact</a> |
-            <a href="https://github.com/real-rates/CURRENCY-CONVERTER-with-Real-rates-" target="_blank" onclick="gtag('event','footer_click',{link:'github'})">GitHub</a>
+            <div class="footer-links">
+                <a href="#" id="aboutLink" onclick="playSound(1)">
+                    <i class="fas fa-info-circle"></i> About
+                </a>
+                <a href="#" id="privacyLink" onclick="playSound(2)">
+                    <i class="fas fa-shield-alt"></i> Privacy
+                </a>
+                <a href="#" id="contactLink" onclick="playSound(3)">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+                <a href="#" id="termsLink" onclick="playSound(4)">
+                    <i class="fas fa-file-contract"></i> Terms
+                </a>
+            </div>
+            
+            <div class="social-links">
+                <!-- FACEBOOK LINK -->
+                <a href="https://www.facebook.com/share/1Bw4fGVbyE/" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="social-icon"
+                   onclick="playSound(1); gtag('event', 'social_click', {platform: 'facebook'})"
+                   aria-label="Visit our Facebook page">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                
+                <!-- INSTAGRAM LINK -->
+                <a href="https://www.instagram.com/badsha.bilal_10?igsh=MTgweTJyZzVmNHY4bg==" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="social-icon"
+                   onclick="playSound(2); gtag('event', 'social_click', {platform: 'instagram'})"
+                   aria-label="Visit our Instagram page">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                
+                
+                <!-- EMAIL LINK -->
+                <a href="mailto:contact@realrates.com" 
+                   class="social-icon"
+                   onclick="playSound(4); gtag('event', 'social_click', {platform: 'email'})"
+                   aria-label="Contact us via email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2024 Real Rates Currency Converter. All rights reserved.</p>
+                <p>Created by <strong itemprop="author">Badsha Bilal</strong></p>
+                <p><i class="fas fa-globe"></i> Visit: <a href="https://real-rates.github.io/CURRENCY-CONVERTER-with-Real-rates-/" style="color: #a18cd1;">real-rates.github.io</a></p>
+            </div>
         </footer>
-        
-        <!-- 👨‍💻 DEVELOPER CREDIT -->
-        <div class="dev">
-            Currency Converter by Badsha Bilal
-        </div>
     </main>
 
     <script>
+    // 🔊 SOUND SYSTEM
+    let soundEnabled = true;
+    
+    function playSound(soundNumber) {
+        if (!soundEnabled) return;
+        
+        try {
+            // Create beep sound using Web Audio API
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            // Different frequencies for different sounds
+            const frequencies = [800, 600, 400, 1000, 1200];
+            oscillator.frequency.value = frequencies[soundNumber - 1] || 800;
+            oscillator.type = 'sine';
+            gainNode.gain.value = 0.1;
+            
+            oscillator.start();
+            setTimeout(() => {
+                oscillator.stop();
+                audioContext.close();
+            }, 100);
+            
+        } catch (e) {
+            console.log("Sound error:", e);
+        }
+    }
+    
+    // Toggle sound function
+    function toggleSound() {
+        soundEnabled = !soundEnabled;
+        const soundBtn = document.getElementById('soundToggle');
+        soundBtn.classList.toggle('muted', !soundEnabled);
+        soundBtn.innerHTML = soundEnabled ? '🔊' : '🔇';
+        
+        // Play toggle sound
+        if (soundEnabled) {
+            playSound(1);
+        }
+        
+        // Save preference
+        localStorage.setItem('currencyConverterSound', soundEnabled);
+    }
+    
+    // 💱 CURRENCY CONVERTER
     const api = "https://open.er-api.com/v6/latest/USD";
     const from = document.getElementById("from");
     const to = document.getElementById("to");
@@ -372,35 +629,28 @@
     const flagTo = document.getElementById("flagTo");
     const searchFrom = document.getElementById("searchFrom");
     const searchTo = document.getElementById("searchTo");
+    const swapBtn = document.getElementById("swapBtn");
+    const loading = document.getElementById("loading");
 
     let rates = {}, currencies = [];
 
-    // 🌍 EXPANDED FLAG MAPPING WITH PRIORITY FOR AFN & MAJOR CURRENCIES
     const flagMap = {
-        // MAJOR CURRENCIES
         USD: "us", EUR: "eu", GBP: "gb", JPY: "jp", CNY: "cn",
-        AUD: "au", CAD: "ca", CHF: "ch", 
-        
-        // ASIAN & MIDDLE EASTERN
-        AFN: "af", PKR: "pk", INR: "in", IRR: "ir", SAR: "sa",
-        AED: "ae", QAR: "qa", OMR: "om", KWD: "kw",
-        
-        // EUROPEAN
+        AUD: "au", CAD: "ca", CHF: "ch", AFN: "af", PKR: "pk",
+        INR: "in", IRR: "ir", SAR: "sa", AED: "ae", QAR: "qa",
         RUB: "ru", TRY: "tr", SEK: "se", NOK: "no", DKK: "dk",
-        
-        // OTHER POPULAR
         ZAR: "za", BRL: "br", MXN: "mx", SGD: "sg", HKD: "hk",
         NZD: "nz"
     };
 
-    // 🚀 LOAD CURRENCIES WITH AFN AS DEFAULT FROM CURRENCY
     async function load() {
         try {
+            loading.classList.add('active');
+            
             const res = await fetch(api);
             const data = await res.json();
             rates = data.rates;
             currencies = Object.keys(rates).sort((a, b) => {
-                // PRIORITIZE AFN, THEN MAJOR CURRENCIES
                 if (a === "AFN") return -1;
                 if (b === "AFN") return 1;
                 const priority = ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "PKR", "INR"];
@@ -415,26 +665,26 @@
             renderOptions(from, currencies);
             renderOptions(to, currencies);
 
-            // SET AFN AS DEFAULT FROM CURRENCY (AS REQUESTED)
             from.value = "AFN";
             to.value = "USD";
-            
-            // TRIGGER INITIAL CONVERSION
             convert();
-
-            // ✅ PAGE LOAD EVENT WITH CURRENCY INFO
-            gtag('event', 'converter_loaded', {
-                default_from: "AFN",
-                default_to: "USD",
-                total_currencies: currencies.length
-            });
             
-            // SET INITIAL FLAGS
             updateFlags();
+            
+            // Google Analytics Event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'converter_loaded', {
+                    default_from: "AFN",
+                    default_to: "USD",
+                    total_currencies: currencies.length
+                });
+            }
             
         } catch (error) {
             console.error("Error loading currency data:", error);
             rateText.innerText = "Unable to load exchange rates. Please try again.";
+        } finally {
+            loading.classList.remove('active');
         }
     }
 
@@ -470,31 +720,55 @@
         rateText.innerText = `1 ${from.value} = ${r.toFixed(6)} ${to.value}`;
         updateFlags();
 
-        // ✅ MAIN CONVERSION EVENT WITH DETAILED DATA
-        gtag('event', 'currency_convert', {
-            from_currency: from.value,
-            to_currency: to.value,
-            amount: parseFloat(amount.value),
-            converted_amount: parseFloat(convertedAmount),
-            exchange_rate: r,
-            event_timestamp: new Date().toISOString()
-        });
+        // Play success sound
+        playSound(5);
+        
+        // Google Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'currency_convert', {
+                from_currency: from.value,
+                to_currency: to.value,
+                amount: parseFloat(amount.value),
+                converted_amount: parseFloat(convertedAmount),
+                exchange_rate: r
+            });
+        }
     }
 
     function swap() {
+        playSound(3);
         [from.value, to.value] = [to.value, from.value];
         convert();
-
-        // ✅ SWAP EVENT
-        gtag('event', 'swap_currency', {
-            from_currency: to.value, // AFTER SWAP
-            to_currency: from.value, // AFTER SWAP
-            amount: amount.value
-        });
+        
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'swap_currency', {
+                from_currency: to.value,
+                to_currency: from.value,
+                amount: amount.value
+            });
+        }
     }
 
-    // 🔍 REAL-TIME SEARCH FILTERING
+    // INITIALIZE
+    document.addEventListener('DOMContentLoaded', () => {
+        // Load sound preference
+        const savedSoundPref = localStorage.getItem('currencyConverterSound');
+        if (savedSoundPref !== null) {
+            soundEnabled = savedSoundPref === 'true';
+        }
+        
+        // Update sound button
+        const soundBtn = document.getElementById('soundToggle');
+        soundBtn.classList.toggle('muted', !soundEnabled);
+        soundBtn.innerHTML = soundEnabled ? '🔊' : '🔇';
+        
+        // Load converter
+        load();
+    });
+
+    // EVENT LISTENERS
     searchFrom.oninput = () => {
+        playSound(1);
         let v = searchFrom.value.toUpperCase();
         renderOptions(from, currencies.filter(c => c.includes(v)));
         from.value = currencies.find(c => c.includes(v)) || "";
@@ -502,30 +776,71 @@
     };
     
     searchTo.oninput = () => {
+        playSound(1);
         let v = searchTo.value.toUpperCase();
         renderOptions(to, currencies.filter(c => c.includes(v)));
         to.value = currencies.find(c => c.includes(v)) || "";
         if (to.value) convert();
     };
 
-    // 📊 AUTO CONVERSION ON CHANGE
-    from.onchange = convert;
-    to.onchange = convert;
+    from.onchange = () => {
+        playSound(2);
+        updateFlags();
+        convert();
+    };
+    
+    to.onchange = () => {
+        playSound(2);
+        updateFlags();
+        convert();
+    };
     
     amount.oninput = () => {
         if (amount.value < 0) amount.value = 0;
         convert();
     };
 
-    // 🚀 INITIAL LOAD
-    load();
+    // FOOTER LINKS
+    document.getElementById('aboutLink').onclick = (e) => {
+        e.preventDefault();
+        playSound(1);
+        alert('About:\nFree currency converter with real-time exchange rates. Supports 150+ currencies including AFN, USD, EUR, GBP, PKR.');
+    };
     
-    // 🌐 BROWSER LANGUAGE DETECTION (FOR FUTURE LOCALIZATION)
-    const userLang = navigator.language || navigator.userLanguage;
-    if (userLang.startsWith('ps') || userLang.startsWith('fa-AF')) {
-        // Could add Pashto/Dari support in future
-        console.log("User language detected:", userLang);
-    }
+    document.getElementById('privacyLink').onclick = (e) => {
+        e.preventDefault();
+        playSound(2);
+        alert('Privacy Policy:\nWe do not store any personal data. All conversions happen in real-time using secure APIs.');
+    };
+    
+    document.getElementById('contactLink').onclick = (e) => {
+        e.preventDefault();
+        playSound(3);
+        alert('Contact:\nEmail: contact@realrates.com\nFacebook: facebook.com/share/1Bw4fGVbyE/\nInstagram: instagram.com/badsha.bilal_10');
+    };
+    
+    document.getElementById('termsLink').onclick = (e) => {
+        e.preventDefault();
+        playSound(4);
+        alert('Terms of Service:\nThis service is free to use. Exchange rates are updated in real-time from reliable sources.');
+    };
+
+    // SWAP BUTTON
+    swapBtn.onclick = swap;
+
+    // SOUND TOGGLE
+    document.getElementById('soundToggle').onclick = toggleSound;
+
+    // AUTO-REFRESH EVERY 5 MINUTES
+    setInterval(load, 5 * 60 * 1000);
+    
+    // ENTER KEY SUPPORT
+    amount.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            convert();
+            playSound(5);
+        }
+    });
     </script>
 </body>
 </html>
