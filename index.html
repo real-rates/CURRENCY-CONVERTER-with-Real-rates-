@@ -137,21 +137,17 @@ margin:0 5px;
 
 <section>
 <h3>Live Currency Exchange Rates</h3>
-<p>Convert all world currencies using real-time exchange rates. The converter automatically updates rates and allows instant calculation.</p>
-
-<h3>How Currency Conversion Works</h3>
-<p>Our tool uses reliable exchange rate sources to ensure accurate conversion. Ideal for travelers, traders, and students worldwide.</p>
+<p>Convert all world currencies using real-time exchange rates.</p>
 </section>
 
 <footer>
-<a href="about.html">About</a> | 
-<a href="privacy.html">Privacy Policy</a> | 
-<a href="contact.html">Contact</a>
+<a href="about.html" onclick="gtag('event','footer_click',{link:'about'})">About</a> | 
+<a href="privacy.html" onclick="gtag('event','footer_click',{link:'privacy'})">Privacy</a> | 
+<a href="contact.html" onclick="gtag('event','footer_click',{link:'contact'})">Contact</a>
 </footer>
 
 <div class="dev">
-Developer: Badsha Bilal<br>
-badsha.bilal.546@gmail.com
+Developer: Badsha Bilal
 </div>
 </div>
 
@@ -186,6 +182,9 @@ async function load(){
  from.value="EUR";
  to.value="USD";
  convert();
+
+ // ✅ Page Load Event
+ gtag('event','converter_loaded');
 }
 
 function renderOptions(select,list){
@@ -210,11 +209,21 @@ function convert(){
  result.value=(amount.value*r).toFixed(2);
  rateText.innerText=`1 ${from.value} = ${r.toFixed(4)} ${to.value}`;
  updateFlags();
+
+ // ✅ MAIN KEY EVENT
+ gtag('event','currency_convert',{
+   from_currency: from.value,
+   to_currency: to.value,
+   amount: amount.value
+ });
 }
 
 function swap(){
  [from.value,to.value]=[to.value,from.value];
  convert();
+
+ // ✅ Swap Event
+ gtag('event','swap_currency');
 }
 
 searchFrom.oninput=()=>{
