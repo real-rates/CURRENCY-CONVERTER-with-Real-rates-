@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://real-rates.github.io/CURRENCY-CONVERTER-with-Real-rates-/sitemap.xml
